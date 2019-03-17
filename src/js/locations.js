@@ -1,15 +1,18 @@
 var restaurantData;
+var restaurantName = document.querySelector("#restaurant-name");
 
-var restaurantXHR = new XMLHttpRequest();
-restaurantXHR.open("GET", "assets/data/locations-data.json", true);
-restaurantXHR.responseType = "text";
-restaurantXHR.send();
-
-restaurantXHR.onload = function() {
-  if(restaurantXHR.status === 200) {
-    restaurantData = JSON.parse(restaurantXHR.responseText);
-    console.log(restaurantData);
-    display(0);
+if(restaurantName) {
+  var restaurantXHR = new XMLHttpRequest();
+  restaurantXHR.open("GET", "assets/data/locations-data.json", true);
+  restaurantXHR.responseType = "text";
+  restaurantXHR.send();
+  
+  restaurantXHR.onload = function() {
+    if(restaurantXHR.status === 200) {
+      restaurantData = JSON.parse(restaurantXHR.responseText);
+      console.log(restaurantData);
+      display(0);
+    }
   }
 }
 
@@ -24,7 +27,7 @@ function display(restaurantIndex) {
   document.querySelector("#restaurant-lunch").innerHTML = "<strong>Lunch Price</strong>: $" + restaurantData[restaurantIndex].prices.lunch;
   
   for(i = 0; i < restaurantData[restaurantIndex].options.length; i++) {
-     details += "<li>" + restaurantData[restaurantIndex].options[i] + "</li>";
+    details += "<li>" + restaurantData[restaurantIndex].options[i] + "</li>";
   }
   document.querySelector("#restaurant-menu").innerHTML = "<strong>Menu Sample</strong><br><ul>" + details + "</ul>";
 }

@@ -46,5 +46,14 @@
     ],
     "image": "restaurant-4.jpg",
     "manager":"Jim Jupe"
+  },
+  {
+    "name":"Hot Pockets",
+    "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    "prices":{"breakfast":"21", "lunch":"17"},
+    "options":[
+      "meat",
+      "pies"
+    ]
   }
 ]

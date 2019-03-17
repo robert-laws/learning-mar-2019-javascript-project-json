@@ -6,10 +6,15 @@ block content
 
       h6 Loading and displaying JSON content with Ajax and JQuery
 
-      p ...
+      p Similar to using the XMLHttpRequest function, Ajax processing can be performed with JQuery using the 
+        span.code .getJSON()
+        |function.
+
+      +codeMulti('Javascript', '$(document).ready(function() {', '  $.getJSON("assets/data/locations-data.json", function(data) {', '    var p = $("#ajax-data");', '    data.forEach(function(elem) {', '      console.log(elem.name);', '    });', '  });', '});')
 
       section.example-area
         h6 Code in Action - Example 1
         article.example-area__samples
           section.jquery-ajax
-            p ...
+            h6 Restaurant List
+            p#ajax-data
