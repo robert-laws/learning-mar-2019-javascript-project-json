@@ -4,7 +4,9 @@
   "description": "working with javascript and json",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "default": "gulp default"
   },
   "repository": {
     "type": "git",

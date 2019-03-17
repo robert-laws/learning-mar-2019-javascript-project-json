@@ -1,0 +1,61 @@
+.sort-zone {
+  display: flex;
+  min-height: 100vh;
+
+  .connect-list {
+    list-style: none;
+    margin-left: 0;
+    min-height: 100vh;
+  
+    li {
+      margin: 1rem;
+      padding: 1rem;
+      color: $color-white;
+      background-color: lighten($color-secondary, 20%);
+      transition: transform .25s ease-in-out;
+      transition: box-shadow .25s ease-in-out;
+
+      span {
+        background-color: lightblue;
+        color: black;
+        display: block;
+        padding: 0 0.5rem;
+      }
+    }
+
+    li.ui-sortable-helper {
+      background-color: lighten($color-secondary, 30%);;
+      box-shadow: 0 0 8px rgba(53,41,41, .8);
+      transform: scale(1.015);
+      z-index: 100;
+    }
+    li.ui-sortable-placeholder {
+      background-color: lighten($color-secondary, 20%);;
+      box-shadow: inset 0 0 10px #000000;
+    }
+  }
+
+  &__left {
+    flex: 1;
+
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    margin: 1rem;
+  }
+
+  &__right {
+    flex: 1;
+
+    border: 2px dashed #555;
+    border-radius: 10px;
+    margin: 1rem;
+  }
+}
+
+.ui-state-highlight { 
+  height: 3em; 
+  line-height: 1.2em;
+  background-color: lightblue;
+  color: lightblue;
+}
+
