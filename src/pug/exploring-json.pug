@@ -1,0 +1,27 @@
+extends layouts/default.pug
+
+block content
+  main
+    h1 Exploring JSON
+
+      h6 Basics
+
+      p JSON is made up of name/value pairs wrapped in curly braces. Data from the server comes as a string that is accessed via the
+        span.code parse()
+        |function. The JSON content can be converted from an object to a string via the 
+        span.code stringify()
+        |function.
+
+      +codeMulti('Javascript', 'var start = \'{"favColor":"Orange","favSeason":"Fall"}\';', 'var myObject = JSON.parse(start);', 'var myString = JSON.stringify(myObject);')
+
+      p JSON data can have multiple levels of data. This data then can be accessed using the dot notation to select data from the parsed object.
+
+      +codeMulti('Javascript', 'var theData3 = \'{"Bob": {"age":"23", "degree": {"BA":"UVA", "MA":"Cal Tech"}}, "Kal": {"age":"34", "degree":"MBA"}}\';', 'var myObj3 = JSON.parse(theData3);', 'var tripleOne = document.querySelector("#triple-level-one");', 'if(tripleOne) {', '  tripleOne.innerHTML = myObj3.Bob.degree.MA;', '}')
+
+      section.example-area
+        h6 Code in Action - Example 1
+        article.example-area__samples
+          section.exploring-json-one
+            p#single-level-one
+            p#double-level-one
+            p#triple-level-one

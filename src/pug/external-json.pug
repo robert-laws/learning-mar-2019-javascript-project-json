@@ -1,0 +1,27 @@
+extends layouts/default.pug
+
+block content
+  main
+    h1 Loading External JSON Data
+
+      h6 XMLHttpRequest 
+
+      p Using the Asynchronous Javascript and XML (Ajax) service it's possible to access JSON type content independently from other content types. The 
+        span.code .open()
+        |function accepts three arguments. First is the request method - usually GET or POST - the URL for the external data, and a boolean if the request is asynchronous or not.
+
+      +codeMulti('Javascript', 'var xhr = new XMLHttpRequest();', 'xhr.open("GET", "assets/data/team-members.json", true);', 'xhr.responseType = "text"', 'xhr.send();', 'xhr.onreadystatechange = function() {', '  console.log(xhr.readyState);', '  console.log(xhr.status);', '  console.log(xhr.statusText);', '}')
+
+      h6 Ajax - Ready State
+
+      p There are 5 different types of ready states when using Ajax. They include 0 - unsent, 1 - opened, 2 - headers received, 3 - loading, 4 - done. The most useful result is 4 indicating that the request was successful. The status codes and status text are also useful. The code 200 indicates success - which corresponds to OK. A code 404 indicates an error or status is Not Found.
+
+      p Once the ajax request has achieved a ready state of 4 - indicating a successful request, it's possible to call the 
+        span.code onload()
+        |function to work with the requested data. To ensure that the expected data will load properly, it's recommended to check for a status of 200 before attempting to parse the xhr data.
+
+      +codeMulti('Javascript', 'xhr.onload = function() {', '  if(xhr.status === 200) {', '    var myData = JSON.parse(xhr.responseText);', '    console.log(myData);', '  }', '}')
+
+      p The code above can be rewritten more efficiently to process the Ajax request.
+
+      +codeMulti('Javascript', 'var xhr = new XMLHttpRequest();', 'xhr.open("GET", "assets/data/team-members.json", true);', 'xhr.responseType = "text"', 'xhr.onload = function() {', '  if(xhr.status === 200) {', '    var myData = JSON.parse(xhr.responseText);', '    console.log(myData);', '  }', '}', 'xhr.send();')

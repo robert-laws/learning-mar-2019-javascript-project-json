@@ -1,0 +1,12 @@
+{
+  "company": [
+    {"name":"ABC Cola"},
+    {"name":"Lumber Yard"},
+    {"name":"Destiny Furniture"}
+  ],
+  "manager": [
+    {"first_name":"Bob", "last_name":"Cobb"},
+    {"first_name":"Hal", "last_name":"Hope"},
+    {"first_name":"Kal", "last_name":"Kool"}
+  ]
+}

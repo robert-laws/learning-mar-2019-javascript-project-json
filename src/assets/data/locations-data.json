@@ -1,0 +1,50 @@
+[
+  {
+    "name":"City Scapes",
+    "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur sapiente nulla in quos harum facere.",
+    "prices":{"breakfast":"20", "lunch":"14"},
+    "options":[
+      "hamburger",
+      "shrimp",
+      "cheesecake"
+    ],
+    "image": "restaurant-1.jpg",
+    "manager":"Bob Cobb"
+  },
+  {
+    "name":"Light Bites",
+    "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, ad, accusantium cumque obcaecati soluta labore ipsum voluptatibus nesciunt repellendus eveniet rem, saepe dolorum perspiciatis quae neque. Corrupti at illum voluptatibus explicabo blanditiis possimus officiis!",
+    "prices":{"breakfast":"17", "lunch":"19"},
+    "options":[
+      "sandwich",
+      "nuts",
+      "crackers",
+      "fries"
+    ],
+    "image": "restaurant-2.jpg",
+    "manager":"Hal Hope"
+  },
+  {
+    "name":"Dessert Heaven",
+    "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus harum nobis neque tempora assumenda? Ipsum, nisi beatae. Ex doloremque necessitatibus nobis adipisci nisi sed quis suscipit aperiam nesciunt?",
+    "prices":{"breakfast":"12", "lunch":"25"},
+    "options":[
+      "ice cream",
+      "eclair",
+      "fudge"
+    ],
+    "image": "restaurant-3.jpg",
+    "manager":"Kal Kool"
+  },
+  {
+    "name":"Boiling Potatoes",
+    "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, fugiat ad. Laborum eum, excepturi voluptatibus error asperiores architecto necessitatibus dolorem?",
+    "prices":{"breakfast":"26", "lunch":"22"},
+    "options":[
+      "potatoes",
+      "steak"
+    ],
+    "image": "restaurant-4.jpg",
+    "manager":"Jim Jupe"
+  }
+]
